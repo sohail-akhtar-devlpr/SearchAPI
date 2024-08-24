@@ -13,10 +13,10 @@ Hit the "send" button of the API tester to see the resultt
 # Security Implementation.
 I used the Basic Authentication of Spring Boot Security for the securing the end point.
 I add the following Dependency to enable the Spring Boot Security.
-    <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
 
 I have implement the SecurityFilterChain interface to provide the Basic Authentication.
 We can also provide the robust authentication that is the JWT Role Based Authentication.
@@ -25,13 +25,13 @@ A detail illustration of implementing JWT Role Based Authentication is given bel
 1-> ADD DEPENDENCY.
 
 <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-security</artifactId>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
 <dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt</artifactId>
-    <version>0.9.1</version>
+ <groupId>io.jsonwebtoken</groupId>
+ <artifactId>jjwt</artifactId>
+ <version>0.9.1</version>
 </dependency>
 
 2-> CONFIGURE SPRING SECURITY.
@@ -79,7 +79,7 @@ I did not used this feature in this given application rather just use a try-catc
 
 # Input Validation
 We can validate the various inputs provided by the user by adding the following dependency.
-    <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
