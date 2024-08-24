@@ -11,13 +11,13 @@
 10. Hit the "send" button of the API tester to see the resultt
 
 # Security Implementation.
-I used the Basic Authentication of Spring Boot Security for the securing the end point.
-I add the following Dependency to enable the Spring Boot Security.
-<dependency>
+1. I used the Basic Authentication of Spring Boot Security for the securing the end point.
+2. I add the following Dependency to enable the Spring Boot Security.
+```<dependency>
  <groupId>org.springframework.boot</groupId>
  <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
-
+```
 I have implement the SecurityFilterChain interface to provide the Basic Authentication.
 We can also provide the robust authentication that is the JWT Role Based Authentication.
 A detail illustration of implementing JWT Role Based Authentication is given below:
