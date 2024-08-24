@@ -68,13 +68,15 @@ A detail illustration of implementing JWT Role Based Authentication is given bel
 - Validate user credentials, generate JWT, and return it in the response.
 - Implement a RegistrationController for user registration, assigning roles to users.
 
-## Database Configuration .
+## Database Configuration
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/searchapi
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=abc
 spring.datasource.password=abc123
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+```
 
 ## Exception Handling
 We can use the Spring Boot's inbuilt GlobaLExceptionHandler Feature to handle the exceptions seamlessly.
