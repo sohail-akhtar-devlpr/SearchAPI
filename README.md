@@ -34,33 +34,33 @@ A detail illustration of implementing JWT Role Based Authentication is given bel
     <version>0.9.1</version>
 </dependency>
 
-2->CONFIGURE SPRING SECURITY.
+2-> CONFIGURE SPRING SECURITY.
 Create a custom SecurityConfig class that extends WebSecurityConfigurerAdapter.
 Override configure(HttpSecurity http) to define security rules.
 Disable CSRF for stateless sessions.
 Permit /login and /register endpoints and secure others based on roles.
 
-3. CREATE JWT Utility Class
+3-> CREATE JWT Utility Class
 Implement a JwtUtil class for generating and validating JWT tokens.
 Implement methods to:
 Generate JWT tokens with roles.
 Validate JWT tokens.
 Extract roles and other claims from the token.
 
-4. CREATE UserDetailsService Implementation
+4-> CREATE UserDetailsService Implementation
 Implement a UserDetailsService that loads user details based on username.
 Fetch the user's roles and encode them in the UserDetails object.
 
-5. CREATE JWT Filter
+5-> CREATE JWT Filter
 Implement a JwtRequestFilter that extends OncePerRequestFilter.
 Extract and validate the JWT from the Authorization header.
 Set the Authentication in the Spring Security context if the token is valid.
 
-6.CONFIGURE Role-Based Access Control
+6-> CONFIGURE Role-Based Access Control
 Define role-based access control in SecurityConfig using http.authorizeRequests().
 Ensure that different endpoints require different roles (e.g., ADMIN, USER).
 
-7. CREATE LOGIN AND REGISTRATION ENDPOINTS
+7-> CREATE LOGIN AND REGISTRATION ENDPOINTS
 Implement a LoginController to handle authentication requests.
 Validate user credentials, generate JWT, and return it in the response.
 Implement a RegistrationController for user registration, assigning roles to users.
