@@ -1,14 +1,14 @@
 ## How to RUN the Application
-Open the code(program/application) in the Eclipse IDE.
-Clcik open the SuppliersInfoApplication.java in the com.search.suppliers package.
-In this file, right click in the file, go to Run As and then java Application.
-Or run the application directly by clicking the Run Button on the top.
-Open the Talend API Tester or Postman, I am using Talend.
-Select the method as POST.
-Hit this URL:http://localhost:8080/api/supplier/query
-Add query parameter like location, natureOfBusiness or manufacturingProcess.
-Add Authorization:- Username:dummy, Password:dummy
-Hit the "send" button of the API tester to see the resultt
+1. Open the code(program/application) in the Eclipse IDE.
+2. Clcik open the SuppliersInfoApplication.java in the com.search.suppliers package.
+3. In this file, right click in the file, go to Run As and then java Application.
+4. Or run the application directly by clicking the Run Button on the top.
+5. Open the Talend API Tester or Postman, I am using Talend.
+6. Select the method as POST.
+7. Hit this URL:http://localhost:8080/api/supplier/query
+8. Add query parameter like location, natureOfBusiness or manufacturingProcess.
+9. Add Authorization:- Username:dummy, Password:dummy
+10. Hit the "send" button of the API tester to see the resultt
 
 # Security Implementation.
 I used the Basic Authentication of Spring Boot Security for the securing the end point.
