@@ -19,21 +19,23 @@
   <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
 ```
+
 I have implement the SecurityFilterChain interface to provide the Basic Authentication.
 We can also provide the robust authentication that is the JWT Role Based Authentication.
 A detail illustration of implementing JWT Role Based Authentication is given below:
 
 1-> ADD DEPENDENCY.
-
+```
 <dependency>
- <groupId>org.springframework.boot</groupId>
- <artifactId>spring-boot-starter-security</artifactId>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
 <dependency>
- <groupId>io.jsonwebtoken</groupId>
- <artifactId>jjwt</artifactId>
- <version>0.9.1</version>
+   <groupId>io.jsonwebtoken</groupId>
+   <artifactId>jjwt</artifactId>
+   <version>0.9.1</version>
 </dependency>
+```
 
 2-> CONFIGURE SPRING SECURITY.
 Create a custom SecurityConfig class that extends WebSecurityConfigurerAdapter.
