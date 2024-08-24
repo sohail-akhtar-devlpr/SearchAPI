@@ -10,7 +10,7 @@
 9. Add Authorization:- Username:dummy, Password:dummy
 10. Hit the "send" button of the API tester to see the resultt
 
-# Security Implementation.
+## Security Implementation.
 1. I used the Basic Authentication of Spring Boot Security for the securing the end point.
 2. I add the following Dependency to enable the Spring Boot Security.
 ```
@@ -38,37 +38,37 @@ A detail illustration of implementing JWT Role Based Authentication is given bel
 ```
 
 2-> CONFIGURE SPRING SECURITY.
-Create a custom SecurityConfig class that extends WebSecurityConfigurerAdapter.
-Override configure(HttpSecurity http) to define security rules.
-Disable CSRF for stateless sessions.
-Permit /login and /register endpoints and secure others based on roles.
+- Create a custom SecurityConfig class that extends WebSecurityConfigurerAdapter.
+- Override configure(HttpSecurity http) to define security rules.
+- Disable CSRF for stateless sessions.
+- Permit /login and /register endpoints and secure others based on roles.
 
 3-> CREATE JWT Utility Class
-Implement a JwtUtil class for generating and validating JWT tokens.
-Implement methods to:
-Generate JWT tokens with roles.
-Validate JWT tokens.
-Extract roles and other claims from the token.
+- Implement a JwtUtil class for generating and validating JWT tokens.
+- Implement methods to:
+- Generate JWT tokens with roles.
+- Validate JWT tokens.
+- Extract roles and other claims from the token.
 
 4-> CREATE UserDetailsService Implementation
-Implement a UserDetailsService that loads user details based on username.
-Fetch the user's roles and encode them in the UserDetails object.
+- Implement a UserDetailsService that loads user details based on username.
+- Fetch the user's roles and encode them in the UserDetails object.
 
 5-> CREATE JWT Filter
-Implement a JwtRequestFilter that extends OncePerRequestFilter.
-Extract and validate the JWT from the Authorization header.
-Set the Authentication in the Spring Security context if the token is valid.
+- Implement a JwtRequestFilter that extends OncePerRequestFilter.
+- Extract and validate the JWT from the Authorization header.
+- Set the Authentication in the Spring Security context if the token is valid.
 
 6-> CONFIGURE Role-Based Access Control
-Define role-based access control in SecurityConfig using http.authorizeRequests().
-Ensure that different endpoints require different roles (e.g., ADMIN, USER).
+- Define role-based access control in SecurityConfig using http.authorizeRequests().
+- Ensure that different endpoints require different roles (e.g., ADMIN, USER).
 
 7-> CREATE LOGIN AND REGISTRATION ENDPOINTS
-Implement a LoginController to handle authentication requests.
-Validate user credentials, generate JWT, and return it in the response.
-Implement a RegistrationController for user registration, assigning roles to users.
+- Implement a LoginController to handle authentication requests.
+- Validate user credentials, generate JWT, and return it in the response.
+- Implement a RegistrationController for user registration, assigning roles to users.
 
-# Database Configuration .
+## Database Configuration .
 spring.datasource.url=jdbc:mysql://localhost:3306/searchapi
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=abc
@@ -76,13 +76,15 @@ spring.datasource.password=abc123
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
-# Exception Handling
+## Exception Handling
 We can use the Spring Boot's inbuilt GlobaLExceptionHandler Feature to handle the exceptions seamlessly.
 I did not used this feature in this given application rather just use a try-catch block.
 
-# Input Validation
+## Input Validation
 We can validate the various inputs provided by the user by adding the following dependency.
+```
 <dependency>
- <groupId>org.springframework.boot</groupId>
- <artifactId>spring-boot-starter-validation</artifactId>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
+```
