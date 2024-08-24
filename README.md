@@ -1,4 +1,4 @@
-## h2 How to RUN the Application
+## How to RUN the Application
 Open the code(program/application) in the Eclipse IDE.
 Clcik open the SuppliersInfoApplication.java in the com.search.suppliers package.
 In this file, right click in the file, go to Run As and then java Application.
